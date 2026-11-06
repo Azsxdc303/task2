@@ -1,0 +1,461 @@
+
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>استضافة المواقع الإلكترونية وأسماء النطاقات</title>
+
+  <style>
+    :root {
+      --navy: #28476e;
+      --text: #292929;
+      --muted: #666;
+      --line: #b9c7d6;
+      --light: #f1f4f8;
+      --white: #fff;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      padding: 32px 16px;
+      background: #eef1f5;
+      color: var(--text);
+      font-family: Tahoma, Arial, sans-serif;
+      font-size: 17px;
+      line-height: 1.95;
+    }
+
+    .report {
+      width: min(900px, 100%);
+      margin: 0 auto;
+      padding: 56px 70px;
+      background: var(--white);
+      box-shadow: 0 8px 28px rgba(25, 45, 70, 0.12);
+    }
+
+    .cover {
+      min-height: 920px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+    }
+
+    .course {
+      margin-bottom: 120px;
+      color: var(--muted);
+      font-size: 20px;
+    }
+
+    h1 {
+      margin: 0;
+      color: #111;
+      font-size: clamp(30px, 5vw, 44px);
+      line-height: 1.5;
+    }
+
+    .subtitle {
+      margin: 22px 0 110px;
+      color: var(--muted);
+      font-size: 22px;
+    }
+
+    .student-info {
+      color: #444;
+      font-size: 18px;
+    }
+
+    .student-info p {
+      margin: 7px 0;
+    }
+
+    h2 {
+      margin: 42px 0 18px;
+      padding-bottom: 8px;
+      border-bottom: 2px solid var(--navy);
+      color: var(--navy);
+      font-size: 25px;
+      line-height: 1.5;
+    }
+
+    h3 {
+      margin: 24px 0 10px;
+      color: #222;
+      font-size: 20px;
+    }
+
+    p {
+      margin: 12px 0;
+    }
+
+    .summary {
+      margin: 0 0 30px;
+      padding: 20px 24px;
+      border-right: 5px solid var(--navy);
+      background: var(--light);
+    }
+
+    ol,
+    ul {
+      padding-right: 28px;
+    }
+
+    li {
+      margin: 8px 0;
+    }
+
+    table {
+      width: 100%;
+      margin: 18px 0 32px;
+      border-collapse: collapse;
+      font-size: 15px;
+    }
+
+    th,
+    td {
+      padding: 11px 13px;
+      border: 1px solid var(--line);
+      text-align: right;
+      vertical-align: top;
+    }
+
+    th {
+      background: #e8eef5;
+      color: #243d5a;
+    }
+
+    .references {
+      direction: ltr;
+      text-align: left;
+      overflow-wrap: anywhere;
+      font-size: 14px;
+      line-height: 1.7;
+    }
+
+    .references p {
+      margin: 10px 0;
+    }
+
+    a {
+      color: #245b91;
+    }
+
+    @media (max-width: 640px) {
+      body {
+        padding: 0;
+        font-size: 16px;
+      }
+
+      .report {
+        padding: 28px 20px;
+      }
+
+      .cover {
+        min-height: 780px;
+      }
+
+      .course {
+        margin-bottom: 75px;
+      }
+
+      .subtitle {
+        margin-bottom: 75px;
+      }
+
+      table {
+        font-size: 13px;
+      }
+
+      th,
+      td {
+        padding: 8px;
+      }
+    }
+
+    @media print {
+      body {
+        padding: 0;
+        background: white;
+      }
+
+      .report {
+        width: 100%;
+        padding: 20mm;
+        box-shadow: none;
+      }
+
+      .cover {
+        min-height: 250mm;
+        page-break-after: always;
+      }
+
+      h2,
+      h3,
+      table {
+        break-after: avoid;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <main class="report">
+
+    <header class="cover">
+      <div class="course">مادة تطبيقات الإنترنت والمنصات الإلكترونية</div>
+
+      <h1>استضافة المواقع الإلكترونية وأسماء النطاقات</h1>
+      <p class="subtitle">كيف يعمل الموقع، وكيف يحصل على عنوان على الإنترنت؟</p>
+
+      <div class="student-info">
+        <p>الاسم: منى منير إبراهيم أبو النجا</p>
+        <p>المجموعة: هـ</p>
+        <p>السكشن: ١٥٥</p>
+      </div>
+    </header>
+
+    <section>
+      <h2>الملخص</h2>
+      <div class="summary">
+        <p>
+          كثير منا يكتب اسم موقع في المتصفح فيظهر أمامه خلال ثوانٍ، من غير أن يفكر
+          فيما يحدث خلف الشاشة. حاولت في هذا التقرير أن أشرح هذه الخطوات ببساطة:
+          أين تُحفظ ملفات الموقع (الاستضافة)، وكيف يصبح له اسم يسهل تذكره (اسم النطاق
+          Domain Name)، وما دور نظام DNS في الربط بين الاثنين. وتناولت بعد ذلك أنواع
+          الاستضافة المشهورة، مع بعض الأمثلة العملية، وأنهيت التقرير بنقاط تساعد على
+          الاختيار بينها.
+        </p>
+      </div>
+    </section>
+
+    <section>
+      <h2>١. المقدمة</h2>
+      <p>
+        الموقع الإلكتروني في النهاية ليس إلا مجموعة ملفات: صفحات HTML، وملفات تنسيق
+        CSS، وأكواد JavaScript، إلى جانب الصور والفيديوهات. هذه الملفات محفوظة على
+        جهاز اسمه الخادم (Server)، وهو جهاز يظل متصلًا بالإنترنت طوال الوقت [1].
+      </p>
+      <p>
+        ولكي يصل الزائر إلى هذه الملفات نحتاج إلى شيئين: مكان تحفظ فيه الملفات
+        ويرسلها لمن يطلبها، وهذا ما نسميه الاستضافة؛ وعنوان يعرفه الناس ويكتبونه
+        للوصول إلى الموقع، وهو اسم النطاق. الهدف من هذا التقرير أن أوضح كيف يرتبط
+        الاثنان ببعضهما، وكيف يعملان معًا حتى تظهر الصفحة أمام المستخدم.
+      </p>
+    </section>
+
+    <section>
+      <h2>٢. ماذا يحدث عندما نفتح موقعًا؟</h2>
+      <p>
+        فتح أي موقع يقوم على فكرة بسيطة اسمها نموذج العميل والخادم (Client–Server):
+        طرف يطلب وطرف يرد. ويمكن تلخيص ما يحدث في أربع خطوات [1]:
+      </p>
+      <ol>
+        <li>يكتب المستخدم اسم الموقع في المتصفح، والمتصفح هنا هو «العميل».</li>
+        <li>
+          المتصفح لا يفهم الأسماء، لذلك يسأل نظام DNS عن عنوان الـ IP الخاص بهذا الاسم [3].
+        </li>
+        <li>
+          بعد أن يعرف العنوان، يرسل طلبًا إلى الخادم باستخدام بروتوكول HTTP أو HTTPS
+          إذا كان الاتصال مشفرًا.
+        </li>
+        <li>
+          يستقبل الخادم الطلب ويرد بملفات الصفحة، فيعرضها المتصفح للمستخدم.
+        </li>
+      </ol>
+      <p>كل هذا يحدث عادة في أقل من ثانية، ولهذا لا نشعر به.</p>
+    </section>
+
+    <section>
+      <h2>٣. أسماء النطاقات ونظام DNS</h2>
+
+      <h3>٣.١ ما هو اسم النطاق؟</h3>
+      <p>
+        اسم النطاق هو العنوان المكتوب بالحروف الذي نستخدمه لفتح الموقع، مثل
+        <bdi>example.com</bdi>. فائدته الأساسية أنه يريحنا من حفظ عناوين IP، وهي مجرد
+        أرقام يصعب تذكرها [2]. ويتكون الاسم من جزأين: اسم الموقع نفسه، ثم الامتداد
+        (TLD) مثل <bdi>.com</bdi> و<bdi>.org</bdi> و<bdi>.edu</bdi> وغيرها.
+      </p>
+      <p>
+        ولا يمكن لأي شخص أن يستخدم اسمًا هكذا مباشرة، بل يجب أن يسجله عند شركة تسجيل
+        معتمدة (Registrar) مثل Namecheap، ويدفع رسومًا تتجدد كل سنة [5].
+      </p>
+
+      <h3>٣.٢ نظام أسماء النطاقات (DNS)</h3>
+      <p>
+        أقرب تشبيه لنظام DNS هو دليل الهاتف: نبحث فيه بالاسم فنحصل على الرقم. والأمر
+        نفسه هنا، إذ يأخذ اسم النطاق ويرجع لنا عنوان الـ IP الذي تتعامل به الأجهزة [3].
+        ويتحكم صاحب الموقع في هذا الربط من خلال ما يسمى سجلات DNS، وأشهرها:
+      </p>
+
+      <table>
+        <thead>
+          <tr>
+            <th>نوع السجل</th>
+            <th>وظيفته</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>A</td>
+            <td>يربط اسم النطاق بعنوان الـ IP الخاص بالخادم.</td>
+          </tr>
+          <tr>
+            <td>CNAME</td>
+            <td>يجعل اسمًا فرعيًا (مثل www) يشير إلى اسم نطاق آخر.</td>
+          </tr>
+          <tr>
+            <td>MX</td>
+            <td>يحدد الخادم المسؤول عن البريد الإلكتروني الخاص بالنطاق.</td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+
+    <section>
+      <h2>٤. الاستضافة وأنواعها</h2>
+      <p>
+        الاستضافة باختصار هي أن تستأجر مساحة على خادم متصل بالإنترنت، تضع فيها ملفات
+        موقعك ليتمكن الزوار من الوصول إليها. وليست كل الاستضافات متشابهة، فهي تختلف
+        في الموارد المتاحة، وفي مقدار التحكم الذي يحصل عليه صاحب الموقع، وبالطبع في
+        السعر. والجدول التالي يلخص أشهر الأنواع:
+      </p>
+
+      <table>
+        <thead>
+          <tr>
+            <th>النوع</th>
+            <th>الوصف</th>
+            <th>مناسب لـ</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>الاستضافة المشتركة (Shared)</td>
+            <td>أكثر من موقع يتشاركون خادمًا واحدًا، لذلك سعرها منخفض.</td>
+            <td>المواقع الصغيرة ومن يبدأ لأول مرة.</td>
+          </tr>
+          <tr>
+            <td>الخادم الافتراضي الخاص (VPS)</td>
+            <td>جزء محجوز من موارد الخادم لك وحدك، مع تحكم أكبر.</td>
+            <td>المواقع متوسطة الحجم.</td>
+          </tr>
+          <tr>
+            <td>الخادم المخصص (Dedicated)</td>
+            <td>خادم كامل لموقع واحد فقط.</td>
+            <td>المواقع الكبيرة.</td>
+          </tr>
+          <tr>
+            <td>الاستضافة السحابية (Cloud)</td>
+            <td>الموارد موزعة على عدة خوادم، ويمكن زيادتها حسب الحاجة.</td>
+            <td>التطبيقات التي يتغير عدد زوارها كثيرًا.</td>
+          </tr>
+          <tr>
+            <td>استضافة المواقع الثابتة</td>
+            <td>تعرض ملفات HTML وCSS وJavaScript كما هي، دون أي معالجة على الخادم.</td>
+            <td>المشاريع الدراسية والشخصية.</td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+
+    <section>
+      <h2>٥. أمثلة عملية</h2>
+
+      <p>
+        <strong>المثال الأول: GitHub Pages.</strong>
+        خدمة من منصة GitHub لاستضافة المواقع الثابتة. فكرتها أنها تنشر الملفات مباشرة
+        من المستودع (Repository) الذي رفعت عليه مشروعك، وتعطيك رابطًا مجانيًا ينتهي
+        بـ <bdi>github.io</bdi> [4]. وفي رأيي هي من أنسب الخيارات للمشاريع الدراسية،
+        لأن إعدادها سهل ولا يحتاج إلى أي تكلفة.
+      </p>
+
+      <p>
+        <strong>المثال الثاني: تسجيل نطاق خاص.</strong>
+        لو أردت اسمًا خاصًا بك بدلًا من الرابط المجاني، تبحث أولًا عن اسم غير محجوز
+        عند شركة تسجيل مثل Namecheap وتسجله. بعد ذلك تدخل لوحة التحكم وتضيف سجل
+        <bdi>A</bdi> أو <bdi>CNAME</bdi> يشير إلى مزود الاستضافة، وبعد فترة قصيرة يصبح
+        الموقع متاحًا بالاسم الجديد [5].
+      </p>
+
+      <p>
+        <strong>المثال الثالث: شهادة SSL/TLS.</strong>
+        هذه الشهادة هي ما يجعل الاتصال بين المتصفح والخادم مشفرًا، وهي سبب ظهور
+        <bdi>HTTPS</bdi> وعلامة القفل بجانب الرابط. وأهميتها أنها تحمي بيانات
+        المستخدمين من أن يطلع عليها أحد أثناء انتقالها. والجميل أن معظم شركات
+        الاستضافة توفرها الآن ضمن خدماتها.
+      </p>
+    </section>
+
+    <section>
+      <h2>٦. كيف نختار؟</h2>
+      <p>قبل اختيار الاستضافة واسم النطاق، من المفيد التفكير في النقاط التالية:</p>
+      <ul>
+        <li>أن يكون اسم النطاق مناسبًا لمحتوى الموقع، وسهل الكتابة والحفظ.</li>
+        <li>سرعة الخادم، ونسبة الوقت الذي يظل فيه يعمل دون انقطاع (Uptime).</li>
+        <li>مساحة التخزين، وعدد الزوار المتوقع.</li>
+        <li>وجود دعم فني، ونسخ احتياطي، ووسائل حماية جيدة.</li>
+        <li>التكلفة الكاملة، وليس سعر السنة الأولى فقط، لأن رسوم التجديد تكون أحيانًا أعلى.</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>٧. الخاتمة</h2>
+      <p>
+        من خلال هذا التقرير اتضح لي أن ظهور أي موقع أمام المستخدم يعتمد على ثلاثة
+        أشياء تعمل معًا: اسم النطاق الذي يعرّف الموقع، والاستضافة التي تحفظ ملفاته
+        وترسلها، ونظام DNS الذي يربط بين الاسم ومكان الملفات. وفهم هذه الأساسيات مفيد
+        جدًا لأي شخص يبدأ في تطوير المواقع، لأنه يساعده على نشر مشاريعه بنفسه، واختيار
+        الحل الذي يناسبه من حيث السعر والأداء وإمكانية التوسع لاحقًا.
+      </p>
+    </section>
+
+    <section>
+      <h2>المراجع</h2>
+      <div class="references">
+        <p>
+          [1] MDN Web Docs. “What is a web server?”
+          <a href="https://developer.mozilla.org/en-US/docs/Learn_web_development/Howto/Web_mechanics/What_is_a_web_server">
+            https://developer.mozilla.org/en-US/docs/Learn_web_development/Howto/Web_mechanics/What_is_a_web_server
+          </a>
+        </p>
+
+        <p>
+          [2] MDN Web Docs. “What is a domain name?”
+          <a href="https://developer.mozilla.org/en-US/docs/Learn_web_development/Howto/Web_mechanics/What_is_a_domain_name">
+            https://developer.mozilla.org/en-US/docs/Learn_web_development/Howto/Web_mechanics/What_is_a_domain_name
+          </a>
+        </p>
+
+        <p>
+          [3] Cloudflare Learning Center. “What is DNS?”
+          <a href="https://www.cloudflare.com/learning/dns/what-is-dns/">
+            https://www.cloudflare.com/learning/dns/what-is-dns/
+          </a>
+        </p>
+
+        <p>
+          [4] GitHub Docs. “GitHub Pages documentation.”
+          <a href="https://docs.github.com/en/pages">
+            https://docs.github.com/en/pages
+          </a>
+        </p>
+
+        <p>
+          [5] Namecheap. “Knowledge Base.”
+          <a href="https://www.namecheap.com/support/knowledgebase/">
+            https://www.namecheap.com/support/knowledgebase/
+          </a>
+        </p>
+      </div>
+    </section>
+
+  </main>
+</body>
+</html>
+```
